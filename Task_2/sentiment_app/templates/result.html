@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #685252; /* DARK BACKGROUND */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 40px auto;
+            background: #50443f; /* DARK CARD */
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .sentiment-box {
+            display: inline-block;
+            background: #fefbfa;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #413730; /* GREEN TEXT */
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 55%;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 1px solid #333;
+            background: white;
+        }
+
+        .metric {
+            font-size: 18px;
+            margin: 5px 0;
+            color: #ddd;
+        }
+
+        h2, h3 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Sentiment Result</h2>
+
+        <div class="sentiment-box">
+            {{ sentiment }}
+        </div>
+
+        <p class="metric"><b>Polarity:</b> {{ polarity }}</p>
+        <p class="metric"><b>Subjectivity:</b> {{ subjectivity }}</p>
+
+        <h3>📊 Visualization</h3>
+        <img src="data:image/png;base64,{{ graph }}" alt="Graph">
+        <div style="text-align:center; margin-top: 30px;">
+    <a href="/" class="btn-analyze-again">Analyze Another Text</a>
+</div>
+
+<style>
+.btn-analyze-again {
+    background: #041c05;
+    padding: 10px 22px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+}
+.btn-analyze-again:hover {
+    background: #073402;
+}
+</style>
+
+
+    </div>
+
+</body>
+</html>
