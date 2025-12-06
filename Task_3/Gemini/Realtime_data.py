@@ -1,7 +1,7 @@
 from serpapi import GoogleSearch
 import os
 
-SERP_API_KEY = os.getenv("63fe57f3b583cd2dbd871fa26ca61df76f111e4573164df676efa8e46c4daddf")
+SERP_API_KEY = os.getenv("Your_key")
 
 if not SERP_API_KEY:
     raise Exception("SERP_API_KEY Missing. Set it before running.")
@@ -26,3 +26,4 @@ def google_search(query):
         return "\n".join(snippets)
 
     return "No real-time data found on web."
+
