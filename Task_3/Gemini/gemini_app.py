@@ -2,7 +2,7 @@ import os
 import google.generativeai as genai
 from realtime_search import google_search
 
-GEMINI_API_KEY = os.getenv("AIzaSyD2_YbufDdFoWM8OTTsFqvfOrCu5yUXC24")
+GEMINI_API_KEY = os.getenv("Your_key")
 if not GEMINI_API_KEY:
     raise Exception("GEMINI_API_KEY not found. Set it in environment variables.")
 
@@ -58,3 +58,4 @@ if __name__ == "__main__":
 
         bot_reply = generate_reply(user_input)
         print("AI:", bot_reply)
+
